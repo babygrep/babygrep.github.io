@@ -16,13 +16,22 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     background-color: var(--ctp-base);
     color: var(--ctp-text);
     min-height: 100vh;
+    min-height: -webkit-fill-available;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
     align-items: center;
     padding: 20px;
 }
@@ -30,20 +39,20 @@ body {
 .container {
     max-width: 600px;
     margin-left: 40px;
-}
-
-.placeholder-image {
-    max-width: 400px;
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    display: block;
 }
 
 .links {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     flex-direction: column;
     gap: 12px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
     align-items: flex-start;
 }
 
