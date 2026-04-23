@@ -50,7 +50,6 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     flex-direction: column;
-    gap: 12px;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
@@ -60,7 +59,12 @@ body {
     color: var(--ctp-text);
     text-decoration: none;
     transition: color 0.2s ease;
-    display: inline-block;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.link:last-child {
+    margin-bottom: 0;
 }
 
 .link-pink:hover,
