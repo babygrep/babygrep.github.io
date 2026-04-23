@@ -1,3 +1,15 @@
+/* Catppuccin Macchiato Theme */
+:root {
+    --ctp-base: #24273a;
+    --ctp-text: #cad3f5;
+    --ctp-pink: #f5bde6;
+    --ctp-mauve: #c6a0f6;
+    --ctp-maroon: #ee99a0;
+    --ctp-yellow: #eed49f;
+    --ctp-teal: #8bd5ca;
+    --ctp-lavender: #b7bdf8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +18,88 @@
 
 body {
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 12px;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
     min-height: 100vh;
-    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
-.content {
-    color: #fff;
-    font-size: 2rem;
+.container {
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.link {
+    color: var(--ctp-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.link-pink:hover,
+.link-pink:active {
+    color: var(--ctp-pink);
+}
+
+.link-mauve:hover,
+.link-mauve:active {
+    color: var(--ctp-mauve);
+}
+
+.link-maroon:hover,
+.link-maroon:active {
+    color: var(--ctp-maroon);
+}
+
+.link-yellow:hover,
+.link-yellow:active {
+    color: var(--ctp-yellow);
+}
+
+.link-teal:hover,
+.link-teal:active {
+    color: var(--ctp-teal);
+}
+
+.link-lavender:hover,
+.link-lavender:active {
+    color: var(--ctp-lavender);
+}
+
+/* Mobile: highlight on touch before navigation */
+@media (hover: none) and (pointer: coarse) {
+    .link:active {
+        opacity: 1;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin-left: 15px;
+    }
 }
